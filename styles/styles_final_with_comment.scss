@@ -1,0 +1,227 @@
+body {
+    font-family: 'Roboto', sans-serif;
+  }
+  @mixin keyframes($name) {
+    @-webkit-keyframes #{$name} {
+      @content; 
+    }
+    @-moz-keyframes #{$name} {
+      @content;
+    }
+    @-ms-keyframes #{$name} {
+      @content;
+    }
+    @keyframes #{$name} {
+      @content;
+    } 
+  }
+  @mixin transformVal($rotate-val,$scale-val,$translate-val) {
+    transform: rotate($rotate-val) scale($scale-val) translate($translate-val);
+  }
+  .wrapper {
+    height: 600px;
+    width: 600px;
+    position: relative;
+    margin: 0 auto;
+  }
+  .circle-logo-wrapper {
+    // position: relative;
+    // margin-top: 30%;
+    // margin-left: 30%;
+    -moz-border-radius: 100%;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    position: absolute;
+    top: 40%;
+    left: 40%;
+  }
+  .logo-item {
+    width: 120px;
+    height: 120px;
+    box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.14);
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    // margin: -4%;
+  }
+  /*** Initial position of logos ***/
+  $item-count: 10;
+  $angle: 360/$item-count;
+  $rot: 0;
+  $icon-position: (1:10px, 2:25px, 3:-25px, 4:10px, 5:25px, 6:-25px, 7:10px, 8:25px, 9:-25px, 10:40px);
+  @each $count, $node in $icon-position {
+    $rot: $rot + $angle;
+    .logo-item:nth-of-type(#{$count}) {
+      -webkit-transform: rotate($rot+deg) scale(0.5) translate(#{$node});
+      transform: rotate($rot+deg) scale(0.5) translate(#{$node});
+    }
+  }
+   /*** Assign respective keyframe to respective logo ***/
+  // .logo-item:nth-child(1) {
+  //   transform: rotate(36deg) scale(1) translate(10px);
+  // }
+  $item-count: 10;
+  @for $i from 1 through $item-count {
+    .logo-item-active:nth-of-type(#{$i}) {
+      -webkit-animation: keyframe-#{$i} 4s 1s forwards;
+      animation: keyframe-#{$i} 4s 1s forwards;
+    }
+  }
+  $item-count: 10;
+  $angle: 360/$item-count;
+  $rot: 0;
+  $icon-position: (1:10px, 2:25px, 3:-25px, 4:10px, 5:25px, 6:-25px, 7:10px, 8:25px, 9:-25px, 10:40px);
+  @for $i from 1 through $item-count {
+      $rot: $rot + $angle;
+      @include keyframes(keyframe-#{$i}) {
+        0% {
+          //flower budding kind of animation
+          //@include transformVal($rot+deg,1,10px);
+        }
+        56% {
+            @include transformVal($rot+deg,0.5,195px);
+            -webkit-animation-timing-function: linear;
+            animation-timing-function: linear;
+        }
+        86% {
+            @include transformVal($rot+deg,0.8,210px);
+            -webkit-animation-timing-function: ease-in-out;
+            animation-timing-function: ease-in-out;
+        }
+        100% {
+            @include transformVal($rot+deg,1,215px);
+        }
+      }
+  }
+  /*** Remove transform for child ***/
+  $angle: 360/$item-count;
+  $rot: 0;
+  @for $i from 1 through $item-count {
+    $rot: $rot + $angle;
+    .logo-item:nth-of-type(#{$i}) .logo-child, .logo-item:nth-of-type(#{$i}) .logo-hover {
+      -webkit-transform: rotate(-$rot+deg) scale(1);
+      transform: rotate(-$rot+deg) scale(1);
+    }
+  }
+  .logo-name {
+    text-align: center;
+    width: 100%;
+    color: #0e252e80;
+    text-transform: uppercase;
+    font-size: 10px;
+    opacity: 0;
+    width: 85%;
+    // -webkit-transition: all 0.5s ease-in;  
+    // transition: all 0.5s ease-in;
+  }
+  // .logo-name-img {
+  //   width: 90px;
+  //   height: 90px;
+  //   display: flex;
+  //   justify-content: center;
+  //   align-items: center;
+  // }
+  .logo-item-active:hover a {
+    font-size: 10px;
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.75px;
+  }
+  .logo-center {
+    -webkit-transition: all 0.5s ease-out;  
+    transition: all 0.5s ease-out;
+  }
+  .logo-center {
+    position: absolute;
+    z-index: 1;
+    opacity: 0;
+    // top: calc(40% - 64px);
+    // left: calc(40% - 64px);
+    top: 45%;
+    left: 45%;
+  }
+  .logo-center-active {
+    //animation: name duration timing-function delay iteration-count direction fill-mode play-state;
+    -webkit-animation: opacity-logo 4s ease-in 1s forwards;
+    animation: opacity-logo 4s ease-in 1s forwards;
+  }
+  .logo-name-active {
+    -webkit-animation: opacity-text 4s ease-in 1.5s forwards;
+    animation: opacity-text 4s ease-in 1.5s forwards;
+  }
+  /* To give margin values relative to div and make it consistent*/
+  .logo-child {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    // width: 120px;
+    // height: 120px;
+    width: 90px;
+    height: 90px;
+    margin: 12% auto;
+  }
+  /*** On hover of icon ***/
+  .logo-hover {
+    display: none;
+  }
+  .logo-cta {
+    display: none;
+  }
+  .logo-item:hover {
+    background: #171af7;
+  }
+  .logo-item:hover .logo-name-img {
+    display: none;
+  }
+  .logo-item:hover .logo-name {
+    visibility: hidden;
+  }
+  .logo-item:hover .logo-hover {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    position: relative;
+    width: 120px;
+    height: 120px;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+  .logo-item:hover .logo-cta {
+    display: block;
+  }
+  @include keyframes(opacity-logo) {
+    0% {
+      opacity: 0;
+    }
+    55% {
+        opacity: 0.2;
+    }
+    85% {
+      opacity: 0.8;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  @include keyframes(opacity-text) {
+    0% {
+      opacity: 0;
+    }
+    56% {
+      opacity: 0;
+    }
+    86% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
