@@ -31,6 +31,10 @@ getWeatherData()
 				console.log(currentdata)
 				showWeatherData(currentdata);
 			})
+		},
+		error => {
+			console.error(error)
+			defaultWeatherData();
 		})
 	}
 	function showWeatherData(currentdata){
@@ -54,6 +58,14 @@ getWeatherData()
 		<!--<div class="pull-right">
 			<span class="${add_class}"></span>
 		</div>-->
+		`;
+	}
+	function defaultWeatherData() {
+		weatherForecastEl.innerHTML = 
+		`<div class="pull-left">
+			<p class="tile-weather">20 &#xb0;</p>
+			<p style="font-size:10px">Allowing access to location gives accurate result</p>
+		</div>
 		`;
 	}
 	
@@ -310,7 +322,7 @@ function defaultTechNews() {
 	techArticalDisplayEl.innerHTML =
 	`<a href="https://techcrunch.com/2023/03/15/torch-is-building-solar-powered-outdoor-sensors-to-spot-wildfires-early/">
 		<img class="half-tile-pic" src="https://techcrunch.com/wp-content/uploads/2023/03/Torch-ID-Render-Pair-Top_02.jpg?resize=1200,675" width="100%" />
-		<span class="half-tile-text article-list-items">Test</span>
+		<span class="half-tile-text article-list-items">Torch is building solar-powered outdoor sensors to spot wildfires early</span>
 		<div class="clearfix"></div>
 		<p class="half-tile-header-full-content">The Nest Protect is the single best piece of smart home hardware Ive ever purchased. Not everything in your home would benefit from being connected, but smoke detectors really do. </p>
 	</a>`
