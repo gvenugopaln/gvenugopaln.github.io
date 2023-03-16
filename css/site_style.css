@@ -80,7 +80,10 @@ p, h1, h2, h3, h4, h5{
 .blueTxt{
 	color:#01bde0;
 }
-.projectCard img{
+.siteHeading {
+	margin-bottom: 25px;
+}
+/* .projectCard img{
 	width: 100%;
 	object-fit: cover;
 }
@@ -92,7 +95,7 @@ p, h1, h2, h3, h4, h5{
   background:#000;
   opacity:0.4;
   transition: opacity 200ms ease-out;
-}
+} */
 .animatingCard {
 	margin: 50px auto;
 	text-align: center;
@@ -105,13 +108,23 @@ p, h1, h2, h3, h4, h5{
   overflow:hidden;
   border: 0 none;
   border-radius: 0;
+  /*** for green shade on card ***/
+  background: #17FDD8;
 }
 .designParent {
     width: 100%;
     height: 100%;
     overflow: hidden;
-	border: 3px solid #ccc;
+	/*** for green shade on card ***/
+	opacity: 0.8;
 }
+/*** for green shade on card ***/
+.designParent:after {
+    content: '';
+    background: #17FDD8;
+    position: absolute;
+}
+/*** for green shade on card ***/
 .designChild {
     height: 100%;
     width: 100%;
@@ -138,7 +151,7 @@ p, h1, h2, h3, h4, h5{
 	background-image: url('../images/webdesign_2.png');
 }
 .overlay-text {
-	background: #17FDD8;
+	background: #333;
 	font-weight: 600;
 	width: 80px;
 	height: 80px;
@@ -151,6 +164,7 @@ p, h1, h2, h3, h4, h5{
 	left: 50%;
 	top: 50%;
 	transform: translate(-50%, -50%);
+	color: #fff!important;
 }
 
 .details img{
@@ -251,7 +265,7 @@ header{
     transform: rotate(-5deg);
 }
 .profileSection {
-	margin: 25px auto 50px;
+	margin: 0 auto 60px;
 }
 .profileSection .picSection img {
 	padding: 20px;
@@ -336,7 +350,7 @@ footer .footerRowTwo span, footer .footerRowTwo p{
 	font-size:14px;
 	margin-bottom:40px;
 }
-.profileSection .descSection p.perName{
+.profileSection .descSection .perName{
 	font-size:18px;
 	font-weight:bold;
 }
