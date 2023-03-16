@@ -1,0 +1,213 @@
+@font-face {
+  font-family: 'KozGoPro Regular';
+  src: url('../fonts/KozGoPro-Regular.otf');
+}
+@font-face {
+   font-family: 'KozGoPro Light';
+   src: url ('../fonts/KozGoPro-ExtraLight.otf');
+}
+@font-face {
+    font-family: 'KozGoPro Medium';
+    src: url('../fonts/KozGoPro-Medium.otf');
+}
+@font-face {
+    font-family: 'KozGoPro Bold';
+    src: url('../fonts/KozGoPro-Bold.otf');
+}
+ul,ol{
+	padding-left: 0;
+}
+ul li,ol li{
+	list-style-type: none;
+	padding-left: 0;
+}
+body{
+	font-size:14px;
+	color:#fff;
+	font-family:'KozGoPro Regular';
+	background:#1E0F54;
+	/*background:url('../images/');*/
+}
+a{
+	color:#fff;
+	text-decoration:none;
+}
+/***dark-color***/
+.violet{background:#922091;}
+.green{background:#8abb24;}
+.blue{background:#00aaa9;}
+.brown{background:#a31d00;}
+.magenta{background:#ff4497;}
+.dark-green{/*background:#269333;*/background:#249334;}
+.orange{background:#d7591f;}
+.dark-pink{background:#ba214d;}
+
+/***light-color***/
+.l1{background:#ee825b;}
+.l2{background:#7eb155;}
+.l3{background:#fecc5d;}
+.l4{background:#679eb3;}
+.l5{background:#e45477;}
+
+.l11{background:#00c034;}
+.l21{background:#5bd999;}
+.l31{background:#7658f8;}
+.l41{background:#eac14d;}
+.l51{background:#e6567a;}
+.l61{background:#cb70d7;}
+
+a:hover {
+	color: inherit;
+	text-decoration: none;
+}
+/* .sunny {
+	background: url(../images/weather_icon.png) 248px -110px;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+}
+.broken_cloud {
+	background: url(../images/weather_icon.png) 145px -20px;
+    display: inline-block;
+    width: 90px;
+    height: 90px;
+} */
+.tiles{
+	padding:5px;
+}
+.window-tiles {
+	margin: 20px auto;
+}
+.tile-inner{
+	height:150px;
+	padding: 10px;
+}
+.tile-inner h4{
+	margin-top:5px;
+}
+/*** image with overlaying text ***/
+.tile-image-overlay{
+	padding:0;
+}
+.tile-image-overlay-display {
+	padding: 20px;
+	display: inline-block;
+}
+/* .tile-image-overlay-display:hover {
+	color: #fff;
+	text-decoration: none;
+} */
+.tile-image-overlay-content{
+    width: 100%;
+    height: 100%;
+    border: 0 none;
+}
+.tile-image-overlay-text {
+	position: absolute;
+    top: 10px;
+    background: #333;
+    opacity: 0.8;
+    height: 96%;
+    width: 97.5%;
+    right: 10px;
+    margin: -5px;
+}
+.tile-image-overlay-title {
+    font-size: 18px;
+    line-height: 24px;
+}
+.tile-image-overlay-text {
+	font-size: 13px;
+}
+/*** tile with weather details ***/
+.tile-weather{
+    font-size: 24px;
+	margin: 10px 0 0 0;
+}
+/*** tile with lot of info ***/
+.tile-several-details .content{
+	width:70%;
+}
+.tile-several-details .content h4{
+	font-size:16px;
+	font-weight:bold;
+	margin:0;
+	line-height:20px;
+}
+.tile-several-details .content .author{
+	padding-bottom:8px;
+}
+.tile-several-details .content .reviewer{
+	padding-bottom:8px;
+}
+
+.article-list-items {
+	padding-left: 10px;
+	display: inline-block;
+}
+.article-list-display {
+	display: flex;
+	margin-bottom: 25px;
+}
+/*** tile with full image and text ***/
+.full-tile-pic {
+	height: 120px;
+    object-fit: cover;
+}
+.full-tile-pic__small {
+	height: 60px;
+}
+.full-tile-text {
+	margin-top: 15px;
+	display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.full-tile-text__overlay {
+	background: #333;
+    position: absolute;
+    width: 106%;
+    right: -11px;
+    padding: 5px;
+    height: 75px;
+	opacity: 0.8;
+}
+/*** tile with half image and text ***/
+.half-tile-pic {
+	width: 50%;
+	float: left;
+}
+.half-tile-text {
+	padding-left: 10px;
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.article-cat-left{
+    position: absolute;
+    bottom: 0;
+	left: 15px;
+	font-size: 10px;
+}
+.article-cat-right {
+	position: absolute;
+    bottom: 0;
+	right: 15px;
+	font-size: 10px;
+}
+.half-tile-header-full-content {
+	margin-top: 6px;
+	display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+.ht310{
+	height:310px;
+}
+.ht220{
+	height:220px;
+}
+
