@@ -1,137 +1,189 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-  </head>
-<title>Timeline</title>
+	<title>Component</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--<link rel="stylesheet" href="css/bootstrap.min.css">-->
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/site_style.css">
+	<!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script> -->
+</head>
 <body>
-
-<!--<table class="commonlib-table commonlib-table--basic">
-    <thead>
-      <tr>
-        <th scope="col">No.</th>
-        <th scope="col">First Name</th>
-        <th scope="col">Last Name</th>
-        <th scope="col">Email</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <th>1</th>
-        <td>John</td>
-        <td>Doe</td>
-        <td>john.doe@gmail.com</td>
-      </tr>
-      <tr>
-        <th>2</th>
-        <td>Jane</td>
-        <td>Doe</td>
-        <td>jane.doe@gmail.com</td>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td>Larry</td>
-        <td>the Bird</td>
-        <td>larry@twitter.com</td>
-      </tr>
-      <tr>
-        <th>3</th>
-        <td>Robert</td>
-        <td>Simone</td>
-        <td>robsimone1990@gmail.com</td>
-      </tr>
-    </tbody>
-</table>-->
-<table class="commonlib-table commonlib-table--basic">
-  <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Price</th>
-      <th scope="col">City</th>
-      <th scope="col">Status</th>
-      <th scope="col">Created On</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td>
-          <span class="commonlib__avatar"><img src="images/photo_01.jfif" /></span><span class="commonlib__text-with-avatar">John</span></td>
-      <td>152$</td>
-      <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
-      <td>22/12/2020</td>
-    </tr>
-    <tr>
-      <td>
-          <span class="commonlib__avatar"><img src="images/photo_02.jfif" /></span><span class="commonlib__text-with-avatar">Jane</span></td>
-          <td>152$</td>
-          <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
-      <td>22/12/2020</td>
-  </tr>
-    <tr>
-      <td>
-          <span class="commonlib__avatar"><img src="images/photo_03.jfif" /></span><span class="commonlib__text-with-avatar">Larry</span></td>
-          <td>152$</td>
-          <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--done">Done</span></td>
-      <td>22/12/2020</td>
-    </tr>
-    <tr>
-      <td>
-          <span class="commonlib__avatar commonlib__avatar--no-img">GN</span>
-          <span class="commonlib__text-with-avatar">Robert</span>
-      </td>
-      <td>152$</td>
-      <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--done">Done</span></td>
-      <td>22/12/2020</td>
-    </tr>
-    <tr>
-      <td>
-          <span class="commonlib__avatar"><img src="images/photo_01.jfif" /></span>
-          <span class="commonlib__text-with-avatar">John</span>
-      </td>
-      <td>152$</td>
-      <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
-        <td>22/12/2020</td>
-    </tr>
-    <tr>
-      <td>
-          <span class="commonlib__avatar"><img src="images/photo_02.jfif" /></span>
-          <span class="commonlib__text-with-avatar">Jane</span>
-      </td>
-      <td>152$</td>
-      <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--pending">Pending</span></td>
-      <td>22/12/2020</td>
-    </tr>
-    <tr>
-      <td>
-          <span class="commonlib__avatar"><img src="images/photo_03.jfif" /></span>
-          <span class="commonlib__text-with-avatar">Larry</span>
-      </td>
-      <td>152$</td>
-      <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
-      <td>22/12/2020</td>
-    </tr>
-    <tr>
-      <td>
-          <span class="commonlib__avatar commonlib__avatar--no-img">GVN</span>
-          <span class="commonlib__text-with-avatar">Robert</span>
-      </td>
-      <td>152$</td>
-      <td>San Francisco</td>
-      <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
-      <td>22/12/2020</td>
-    </tr>
-  </tbody>
-</table>  
+	<div class="landingPage">
+		<div class="container-fluid blackBg">
+			<div class="container menu">
+				<nav class="navbar navbar-expand-lg">
+					<a class="logo navbar-brand" href="#">&#60; GVN /&#62;</a>
+					<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+					  <span class="navbar-toggler-icon"></span>
+					</button>
+					<!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+					  <ul class="navbar-nav ml-auto">
+						<li class="nav-item active">
+						  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+						</li>
+						<li class="nav-item">
+						  <a class="nav-link" href="#">About</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="#">Blog</a>
+						  </li>
+					  </ul>
+					</div> -->
+				  </nav>
+			</div>
+		</div>
+		<div class="container-fluid blackBg aboutContent">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-7">
+						<div class="heading aboutHeading">
+							<h1>About</h1>
+							<p>A small gallery of work recent and past, some as a part of my project and some out of my creative interest. 
+								This has various projects involving <span class="highlightWord">Web design & development</span> and everything in between.</p>
+						</div>
+					</div>
+					<div class="col-md-5">
+						<div class="greenPatchSection"></div>
+						<div class="whitePatchSection">
+							<p>There is a host of technology, language, frameworks, tools, methodology and strategy behind these projects. But to name a few it has <span class="keywordUnderline">HTML5</span>, <span class="keywordUnderline">CSS</span> including CSS3 Animations, SCSS, <span class="keywordUnderline">Bootstrap</span>, <span class="keywordUnderline">JS</span> including the latest <span class="keywordUnderline">ES6</span>, couple of open source <span class="keywordUnderline">API</span>, <span class="keywordUnderline">Figma</span> for designing the wireframe and <span class="keywordUnderline">Hi-Fi prototype</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- <div class="container-fluid aboutBody">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-8 colCentered whiteBg">
+						<div class="whitePatchSection">
+							<p>There is a host of technology, language, frameworks, tools, methodology and strategy behind these projects. But to name a few it has <span class="keywordUnderline">HTML5</span>, <span class="keywordUnderline">CSS</span> including CSS3 Animations, SCSS, <span class="keywordUnderline">Bootstrap</span>, <span class="keywordUnderline">JS</span> including the latest <span class="keywordUnderline">ES6</span>, couple of open source <span class="keywordUnderline">API</span>, <span class="keywordUnderline">Figma</span> for designing the wireframe and <span class="keywordUnderline">Hi-Fi prototype</span></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div> -->
+		<!-- <div class="container-fluid blackBg pr-0 pl-0">
+			<div class="row m-0">
+				<div class="col-md-4 projectCard p-0">
+					<a href="detail-window-tile.html"><img src="images/istockphoto-1383963898-612x612.jpg" /></a>
+				</div>
+				<div class="col-md-4 projectCard p-0">
+					<a href="detail-crm.html"><img src="images/istockphoto-1383963898-612x612.jpg" /></a>
+				</div>
+				<div class="col-md-4 projectCard p-0">
+					<a href="detail-erp.html"><img src="images/istockphoto-1383963898-612x612.jpg" /></a>
+				</div>
+				<div class="col-md-4 projectCard p-0">
+					<a href="detail-reusable-component"><img src="images/istockphoto-1383963898-612x612.jpg" /></a>
+				</div>
+				<div class="col-md-4 projectCard p-0">
+					<a href="detail-animations"><img src="images/istockphoto-1383963898-612x612.jpg" /></a>
+				</div>
+				<div class="col-md-4 projectCard p-0">
+					<a href="detail-dashboard"><img src="images/istockphoto-1383963898-612x612.jpg" /></a>
+				</div>
+			</div>
+		</div> -->
+		<div class="container-fluid">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-12 colCentered whiteBg">
+						<div class="webProjectSection">
+							<h1>Web projects</h1>
+							<div class="profileSection">
+								<div class="row">
+									<div class="picSection col-md-7 pull-left">
+										<a href="news_window_tile/index.html"><img class="image-tile" src="images/tile.png" walt="Pic" style="width:100%" /></a>
+									</div>
+									<div class="descSection col-md-5 pull-right">
+										<p class="perName">News on Windows tile</p>
+										<p class="designation">HTML | CSS | ES6 | API | RWD</p>
+										<p class="desc">A visually engaging news display built on a windows tile-based design, powered by the News API. Stay up-to-date with the latest news from around the world, all neatly organized and displayed in an intuitive and eye-catching format. You can effortlessly skim through the top articles on different topics. And with the reliable and comprehensive News API as the source, you can trust that you're getting accurate and timely news updates.</p>
+									</div>
+								</div>
+							</div>
+							<div class="profileSection">
+								<div class="row">
+									<div class="descSection col-md-5 pull-left">
+										<p class="perName">Dark and Light theme switch</p>
+										<p class="designation">HTML | CSS | JS | Theming</p>
+										<p class="desc"> Why settle for a website that doesn't match your style or preferences? Customize your user experience by changing the theme based on your personal preferences. So just with the click of a button change the theme from dark to light or vice-versa as per your prefrence.</p>
+									</div>
+									<div class="picSection col-md-7 pull-right">
+										<a href="theming/theming.html"><img class="image-theme" src="images/table.png" alt="Pic" style="width:100%" /></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="container-fluid">
+			<div class="container animatingCard">
+				<div class="col-md-12 colCentered whiteBg">
+						<h1>UI/UX design & development</h1>
+						<div class="anmie">
+							<div class="row">
+								<div class="col-md-4">
+									<a href="detail-webcrm.html">
+										<div class="designCard three"> 
+											<div class="designParent">
+												<div class="designChild designChildWebcrm"></div>
+												<p class="overlay-text">Demo</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<!-- <div class="col-md-4">
+									<a href="component.html">
+										<div class="designCard three"> 
+											<div class="designParent">
+												<div class="designChild">
+													<p class="overlay-text">Demo</p>
+												</div>
+											</div>
+										</div>
+									</a>
+								</div> -->
+								<div class="col-md-4">
+									<a href="detail-mobile.html">
+										<div class="designCard three"> 
+											<div class="designParent">
+												<div class="designChild designChildMobile"></div>
+												<p class="overlay-text">Demo</p>
+											</div>
+										</div>
+									</a>
+								</div>
+								<div class="col-md-4">
+									<a href="detail-webportal.html">
+										<div class="designCard three"> 
+											<div class="designParent">
+												<div class="designChild designChildWebsite"></div>
+												<p class="overlay-text">Demo</p>
+											</div>
+										</div>
+									</a>
+								</div>
+							</div>
+						</div>
+				</div>
+			</div>
+		</div>
+		<footer>	
+			<div class="footer">
+				<div class="container">
+					<div class="row">
+						<p class="footerTxt">Copyrights. All rights reserved.</p>
+						<div class="clear"></div>	
+					</div>
+				</div>
+			</div>
+		</footer>
+	</div>
 </body>
 </html>

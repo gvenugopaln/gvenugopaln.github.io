@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Component</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	<link rel="stylesheet" href="css/site_style.css">
+	<script type="text/javascript">
+	$(document).ready(function() {
+		//alert('hi');
+		$('.questionList ul li').click(function() {
+			//$(this).addClass('active');
+		    var i = $(this).index();
+		    $('.ansSection').hide();
+		    $('#article' + (i+1)).show();
+		});
+	});
+	</script>
+</head>
+<body>
+	<div class="supportPage">
+		<div class="container-fluid whiteBg">
+			<div class="container">
+				<div class="row">
+					<header>
+						
+					</header>
+				</div>
+				<div class="row">
+					<div class="col-md-8 colCentered">
+						<div class="heading supportHeading">
+							<h1>Support</h1>
+							<p>What can we help you with?</p>
+							<input type="search" class="form-control searchBtn" placeholder="Search">
+						</div>
+					</div>
+					<div class="col-md-8 colCentered faqBlock">
+						<div class="col-md-4 questionList">
+					        <ul>
+					            <li><a href="#">About</a></li>
+					            <li><a href="#">Your Account</a></li>
+					            <li><a href="#">Investing</a></li>
+					            <li><a href="#">Our Fees & Charges</a></li>
+					            <li><a href="#">KYC & FATCA</a></li>
+					            <li><a href="#">Security</a></li>
+					            <li><a href="#">Support</a></li>
+					            <li><a href="#">Everything Else</a></li>
+					        </ul>
+					    </div>
+					    <div class="col-md-8">
+						    <div class="ansSection active" id="article1">
+						        <p class="que">What fees do you charge me?</p>
+								<p class="ans">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui elit, volutpat nec dapibus quis, auctor id massa. Integer laoreet aliquam dignissim. Duis faucibus enim ac congue euismod. Phasellus dapibus nisl nec nunc sollicitudin, non gravida metus sodales. Aenean at ornare felis, sit amet eleifend ex.</p>
+						    </div>
+						    <div class="ansSection" id="article2">
+						        <h1>ARTICLE 2</h1>
+						        <p>ABCDEFGH</p>
+						    </div>
+						    <div class="ansSection" id="article3">
+						        <h1>ARTICLE 3</h1>
+						        <p>ABCDEFGH</p>
+						    </div>
+						    <div class="ansSection" id="article4">
+						        <h1>ARTICLE 4</h1>
+						        <p>ABCDEFGH</p>
+						    </div>
+						     <div class="ansSection" id="article5">
+						        <h1>ARTICLE 5</h1>
+						        <p>ABCDEFGH</p>
+						    </div>
+						     <div class="ansSection" id="article6">
+						        <h1>ARTICLE 6</h1>
+						        <p>ABCDEFGH</p>
+						    </div>
+						     <div class="ansSection" id="article7">
+						        <h1>ARTICLE 7</h1>
+						        <p>ABCDEFGH</p>
+						    </div>
+						     <div class="ansSection" id="article8">
+						        <h1>ARTICLE 8</h1>
+						        <p>ABCDEFGH</p>
+						    </div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+
+		</footer>
+	</div>
+</body>
+</html>
+

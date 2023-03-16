@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/dark.css" id=theme_css>
+  </head>
+<title>Theming</title>
+<body>
+  <div class="container-fluid containerBg">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="heading supportHeading">
+            <h1>Theming - Dark & Light mode</h1>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-12">
+          <div class="clearfix">
+            <h4 class="commonlib-table-subheader float-left">Table</h4>
+            <div class="float-right"><button class="btn_primary" onclick="switchTheme()">Switch Theme</button></div>
+          </div>
+          <table class="commonlib-table commonlib-table--basic" width="100%">
+            <thead>
+              <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Price</th>
+                <th scope="col">City</th>
+                <th scope="col">Status</th>
+                <th scope="col">Created On</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                    <span class="commonlib__avatar"><img src="images/photo_01.jfif" /></span><span class="commonlib__text-with-avatar">Travor Seth</span>
+                </td>
+                <td>152$</td>
+                <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
+                <td>22/12/2020</td>
+              </tr>
+              <tr>
+                <td>
+                  <span class="commonlib__avatar"><img src="images/photo_02.jfif" /></span><span class="commonlib__text-with-avatar">Jason styn</span>
+                </td>
+                <td>152$</td>
+                <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
+                <td>22/12/2020</td>
+            </tr>
+              <tr>
+                <td>
+                    <span class="commonlib__avatar"><img src="images/photo_03.jfif" /></span><span class="commonlib__text-with-avatar">Jennifer Fisher</span></td>
+                    <td>152$</td>
+                    <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--done">Done</span></td>
+                <td>22/12/2020</td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="commonlib__avatar commonlib__avatar--no-img">GN</span>
+                    <span class="commonlib__text-with-avatar">Garry DeNiro</span>
+                </td>
+                <td>152$</td>
+                <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--done">Done</span></td>
+                <td>22/12/2020</td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="commonlib__avatar"><img src="images/photo_01.jfif" /></span>
+                    <span class="commonlib__text-with-avatar">John Doe</span>
+                </td>
+                <td>152$</td>
+                <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
+                  <td>22/12/2020</td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="commonlib__avatar"><img src="images/photo_02.jfif" /></span>
+                    <span class="commonlib__text-with-avatar">Jane Austin</span>
+                </td>
+                <td>152$</td>
+                <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--pending">Pending</span></td>
+                <td>22/12/2020</td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="commonlib__avatar"><img src="images/photo_03.jfif" /></span>
+                    <span class="commonlib__text-with-avatar">Laura Wight</span>
+                </td>
+                <td>152$</td>
+                <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
+                <td>22/12/2020</td>
+              </tr>
+              <tr>
+                <td>
+                    <span class="commonlib__avatar commonlib__avatar--no-img">VN</span>
+                    <span class="commonlib__text-with-avatar">Venus Namb</span>
+                </td>
+                <td>152$</td>
+                <td>San Francisco</td>
+                <td><span class="commonlib__status commonlib__status--inprogress">In Progress</span></td>
+                <td>22/12/2020</td>
+              </tr>
+            </tbody>
+          </table>  
+        </div>
+      </div>
+    </div>
+</body>
+
+
+<script>
+function switchTheme() {
+  var check = document.getElementById('theme_css').classList[0] === 'light';
+
+  var element = document.getElementById('theme_css');
+
+
+  if (check) {
+   element.href = 'css/dark.css';
+   element.classList.remove('light')
+   element.classList.add('dark');
+  } else {
+   element.href = 'css/light.css';
+   element.classList.remove('dark')
+   element.classList.add('light');
+  }
+
+}
+</script>
+</script>
+</html>

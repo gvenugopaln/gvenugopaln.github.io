@@ -1,0 +1,13 @@
+/***/
+h1, h3 {
+    color: #fff;
+}
+.containerBg {
+    background: #000;
+}
+.commonlib-table td, .commonlib-table th {
+    color: #fff;
+}
+.commonlib-table-subheader {
+    color: #fff;
+}
